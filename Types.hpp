@@ -4,6 +4,12 @@
 
 #include "rapidcheck.h"
 
+#define INVOKE_TEMPLATE_TEST_FUNCTION(func) \
+    func<int>();                            \
+    func<double>();                         \
+    func<std::string>();                    \
+    func<SomeType>()
+
 struct SomeType {
     int SomeInteger;
     double SomeFloatingPoint;

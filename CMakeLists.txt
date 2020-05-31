@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory("external/rapidcheck")
 
-add_executable(property_based_testing Main.cpp Data.hpp name_traits.hpp)
+add_executable(property_based_testing Main.cpp Types.hpp name_traits.hpp Realization.cpp Realization.hpp)
 target_link_libraries(property_based_testing rapidcheck)
